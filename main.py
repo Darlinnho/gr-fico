@@ -8,7 +8,7 @@ uploaded_file = st.file_uploader("Escolha um arquivo em CSV", type=['csv'])
 # Verificar se o arquivo foi carregado pelo usuário
 if uploaded_file is not None:
     # Carregar os dados do CSV
-    data = pd.read_csv(uploaded_file)
+    data = pd.read_csv(uploaded_file, decimal=',')
 
     # Exibir os nomes das colunas na página
     st.write("Nomes das colunas no arquivo CSV:")
